@@ -8,6 +8,8 @@
 #include "ex4.h"
 #include "ex5.h"
 #include "ex6.h"
+#include "ex7.h"
+#include <iostream>
 
 
 void choose_exercise()
@@ -42,6 +44,10 @@ void choose_exercise()
     else if (exercise_number == 6)
     {
         utils::show_result("234 + 456 = ", ex6::add_two_integers(234, 456));
+    }
+    else if (exercise_number == 7)
+    {
+        utils::show_result("(2.2 + 3.3) = ", ex7::add_two_numbers(2.2, 3.3));
     }
     else
     {
