@@ -9,13 +9,13 @@
 #include "ex5.h"
 #include "ex6.h"
 #include "ex7.h"
-#include <iostream>
+#include "ex10.h"
 
 
 void choose_exercise()
 {
     int exercise_number =
-        utils::get_int_from_user("Enter an exercise number (to quit choose 0): ");
+        utils::get_int_from_user("Enter an exercise number (to quit type 0): ");
 
     if (exercise_number == 0)
     {
@@ -48,6 +48,11 @@ void choose_exercise()
     else if (exercise_number == 7)
     {
         utils::show_result("(2.2 + 3.3) = ", ex7::add_two_numbers(2.2, 3.3));
+    }
+    else if (exercise_number == 10)
+    {
+        bool result = ex10::is_even(8);
+        utils::show_result("is_even(8) = ", result);
     }
     else
     {
