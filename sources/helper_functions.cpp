@@ -18,6 +18,11 @@ namespace utils
         std::cout << message_to_user << result << "\n\n";
     }
 
+    void show_result(const std::string & message_to_user, double result)
+    {
+        std::cout << message_to_user << result << "\n\n";
+    }
+
     void show_error_message(const std::string & error_message)
     {
         std::cout << error_message;
