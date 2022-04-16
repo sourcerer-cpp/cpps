@@ -3,5 +3,5 @@
 
 int main()
 {
-    choose_exercise();
+    choose_exercise(); // test
 }
