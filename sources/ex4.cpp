@@ -13,8 +13,6 @@ namespace ex4
 {
     double square(double x)
     {
-        double res = x * x;
-
-        return res;
+        return x * x;
     }
 }
