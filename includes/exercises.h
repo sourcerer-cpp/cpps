@@ -35,7 +35,8 @@ void choose_exercise()
     }
     else if (exercise_number == 4)
     {
-        ex4::square();
+        double result = ex4::square(5.0);
+        utils::show_result("square of 5.0: ", result);
     }
     else if (exercise_number == 5)
     {
