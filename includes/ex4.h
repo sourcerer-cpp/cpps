@@ -11,7 +11,7 @@
 
 namespace ex4
 {
-    void square();
+    double square(double x);
 }
 
 #endif // EX4_H
