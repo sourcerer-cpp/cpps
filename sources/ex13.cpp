@@ -16,5 +16,7 @@ namespace ex13
             "life: " << warrior.life << '\n' <<
             "damage: " << warrior.damage << '\n' <<
             "defense: " << warrior.defense << "\n\n";
+
+        // small addition to test git features
     }
 }
