@@ -10,6 +10,7 @@
 #include "ex6.h"
 #include "ex7.h"
 #include "ex10.h"
+#include "ex13.h"
 
 
 void choose_exercise()
@@ -54,6 +55,11 @@ void choose_exercise()
     {
         bool result = ex10::is_even(8);
         utils::show_result("is_even(8) = ", result);
+    }
+    else if (exercise_number == 13)
+    {
+        ex13::Warrior war_unit;
+        ex13::display_warriors_stats(war_unit);
     }
     else
     {

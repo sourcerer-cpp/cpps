@@ -7,6 +7,7 @@ SOURCES += \
     main.cpp \
     sources/ex1.cpp \
     sources/ex10.cpp \
+    sources/ex13.cpp \
     sources/ex2.cpp \
     sources/ex3.cpp \
     sources/ex4.cpp \
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     includes/ex1.h \
     includes/ex10.h \
+    includes/ex13.h \
     includes/ex2.h \
     includes/ex3.h \
     includes/ex4.h \
