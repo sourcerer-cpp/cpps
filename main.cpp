@@ -1,7 +1,7 @@
-#include "includes/exercises.h"
+#include <iostream>
 
 
 int main()
 {
-    choose_exercise();
+    std::cout <<"hello world!\n\n";
 }
