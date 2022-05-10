@@ -10,4 +10,6 @@ Our current technology stack is:
 
 • Git
 
+• neovim
+
 • some bash commands and scripts
