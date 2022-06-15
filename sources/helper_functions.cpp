@@ -36,6 +36,16 @@ namespace utils
 
 namespace math
 {
+    int square(int num)
+    {
+        return num * num;
+    }
+  
+    int cube(int num)
+    {
+        return square(num) * num;
+    }
+  
     int add(int x, int y)
     {
         return x+y;

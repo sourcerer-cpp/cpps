@@ -14,6 +14,8 @@ namespace utils
 
 namespace math
 {
+    int square(int);
+    int cube(int);
     int add(int, int);
     int diff(int, int);
     int divide(int, int);
