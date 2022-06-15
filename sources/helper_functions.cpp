@@ -40,8 +40,29 @@ namespace math
     {
         return num * num;
     }
+  
     int cube(int num)
     {
         return square(num) * num;
+    }
+  
+    int add(int x, int y)
+    {
+        return x+y;
+    }
+
+    int diff(int x, int y)
+    {
+        return x-y;
+    }
+
+    int divide(int x, int y)
+    {
+        return x/y;
+    }
+
+    int multiply(int x, int y)
+    {
+        return x*y;
     }
 }

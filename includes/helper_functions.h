@@ -16,6 +16,10 @@ namespace math
 {
     int square(int);
     int cube(int);
+    int add(int, int);
+    int diff(int, int);
+    int divide(int, int);
+    int multiply(int, int);
 }
 
 #endif // HELPER_FUNCTIONS_H
