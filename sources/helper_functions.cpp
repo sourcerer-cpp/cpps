@@ -33,3 +33,15 @@ namespace utils
         std::cout << error_message;
     }
 }
+
+namespace math
+{
+    int square(int num)
+    {
+        return num * num;
+    }
+    int cube(int num)
+    {
+        return square(num) * num;
+    }
+}
