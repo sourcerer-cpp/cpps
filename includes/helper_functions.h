@@ -12,4 +12,12 @@ namespace utils
     void show_error_message(const std::string & error_message);
 }
 
+namespace math
+{
+    int add(int, int);
+    int diff(int, int);
+    int divide(int, int);
+    int multiply(int, int);
+}
+
 #endif // HELPER_FUNCTIONS_H
