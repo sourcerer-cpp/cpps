@@ -10,6 +10,7 @@ namespace utils
     void show_result(const std::string & message_to_user, double result);
     void show_result(const std::string & message_to_user, bool result);
     void show_error_message(const std::string & error_message);
+    void display_sequenced_numbers(int starting_value, int count, const std::string & op);
 }
 
 namespace math
