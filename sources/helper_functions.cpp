@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "includes/helper_functions.h"
 
 
@@ -35,52 +34,36 @@ namespace utils
 
     void display_sequenced_numbers(int starting_value, int count, const std::string & op)
     {
-        std::cout << "========\n";
 
-        if (op == "<=")
+    }
+
+    void display_sequenced_numbers(int starting_value, int count)
+    {
+        if (starting_value < count)
         {
             while (starting_value <= count)
             {
-                std::cout << starting_value << "\n";
+                std::cout << starting_value << ' ';
                 ++starting_value;
             }
+
+            std::cout << "\n=======================\n";
         }
-        else if (op == ">=")
+        else if (starting_value > count)
         {
             while (starting_value >= count)
             {
-                std::cout << starting_value << "\n";
+                std::cout << starting_value << ' ';
                 --starting_value;
             }
-        }
-        else if (op == "<")
-        {
-            while (starting_value < count)
-            {
-                std::cout << starting_value << "\n";
-                ++starting_value;
-            }
-        }
-        else if (op == ">")
-        {
-            while (starting_value > count)
-            {
-                std::cout << starting_value << "\n";
-                --starting_value;
-            }
+
+            std::cout << "\n=======================\n";
         }
         else
         {
-            std::cout <<
-                "Warning! Wrong operator! Allowed options:\n"
-                "<\n"
-                "<=\n"
-                ">\n"
-                ">=\n"
-                "Programm will be closed.\n";
+            std::cout << "invalid arguments: equal arguments are not allowed.\n\n";
         }
     }
-
 }
 
 namespace math
