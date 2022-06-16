@@ -34,7 +34,50 @@ namespace utils
 
     void display_sequenced_numbers(int starting_value, int count, const std::string & op)
     {
+        std::cout << "========\n";
 
+        if (op == "<=")
+        {
+            while (starting_value <= count)
+            {
+                std::cout << starting_value << "\n";
+                ++starting_value;
+            }
+        }
+        else if (op == ">=")
+        {
+            while (starting_value >= count)
+            {
+                std::cout << starting_value << "\n";
+                --starting_value;
+            }
+        }
+        else if (op == "<")
+        {
+            while (starting_value < count)
+            {
+                std::cout << starting_value << "\n";
+                ++starting_value;
+            }
+        }
+        else if (op == ">")
+        {
+            while (starting_value > count)
+            {
+                std::cout << starting_value << "\n";
+                --starting_value;
+            }
+        }
+        else
+        {
+            std::cout <<
+                "Warning! Wrong operator! Allowed options:\n"
+                "<\n"
+                "<=\n"
+                ">\n"
+                ">=\n"
+                "Programm will be closed.\n";
+        }
     }
 
     void display_sequenced_numbers(int starting_value, int count)
