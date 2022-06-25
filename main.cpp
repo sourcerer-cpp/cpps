@@ -1,15 +1,26 @@
-#include "includes/helper_functions.h"
+#include <iostream>
+#include <string>
 
 
 int main()
 {
-    using utils::display_sequenced_numbers;
-    display_sequenced_numbers(1, 7);
-    display_sequenced_numbers(3, 9);
-    display_sequenced_numbers(-5, 5);
+    std::string greeting = "hello Kishori!\n\n";
+    std::cout << greeting;
 
-    display_sequenced_numbers(23, 13);
-    display_sequenced_numbers(3, -3);
-    display_sequenced_numbers(8, 8);
+    int x = 42;
+
+    std::cout << x << "\n\n";
+
+    [[maybe_unused]] float pi = 3.14;
+    std::cout << pi  << "\n\n";
+
+    double my_very_awesome_variable = 2.5;
+    std::cout << my_very_awesome_variable << "\n\n";
+
+    char symbol = '@';
+    std::cout << symbol << "\n\n";
+
+    bool flag = false;
+    std::cout << flag << "\n\n";
 }
 
