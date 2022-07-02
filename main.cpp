@@ -1,15 +1,19 @@
-#include "includes/helper_functions.h"
+#include <iostream>
 
 
 int main()
 {
-    using utils::display_sequenced_numbers;
-    display_sequenced_numbers(1, 7);
-    display_sequenced_numbers(3, 9);
-    display_sequenced_numbers(-5, 5);
+    // Usually variable has a type (here the type is "int"):
+    [[maybe_unused]] int x;
 
-    display_sequenced_numbers(23, 13);
-    display_sequenced_numbers(3, -3);
-    display_sequenced_numbers(8, 8);
+    // Usually variable has a name (here the name is "is_positive"):
+    [[maybe_unused]] bool is_positive;
+
+    // Usually variable stores some value (here the value is 3.5):
+    double apples = 3.5;
+
+    // We can obtain address of variable using ampersand symbol:
+    std::cout << "\nAddress of variable apples: " << &apples << "\n\n";
 }
 
+//variable is just a named region of memory
