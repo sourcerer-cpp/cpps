@@ -14,6 +14,8 @@ int main()
 
     // We can obtain address of variable using ampersand symbol:
     std::cout << "\nAddress of variable apples: " << &apples << "\n\n";
+
+    // & - address-of operator
 }
 
 //variable is just a named region of memory
