@@ -1,20 +1,23 @@
-// Here you can find more info about built-in types and its range:
-// https://en.cppreference.com/w/cpp/language/types
+// Example #10: signed int overflow, UB
 
 #include <iostream>
 #include <limits>
+#include <thread>
+#include <chrono>
 
 int main()
 {
-    const int BITS_IN_BYTE = 8;
-    const int SIZE_OF_INT_IN_BYTES = sizeof(int);
-    const int SIZE_OF_INT_IN_BITS = SIZE_OF_INT_IN_BYTES * BITS_IN_BYTE;
+    int x = std::numeric_limits<int>::max() - 20;
 
-    std::cout
-        << "Size of type int on this machine: "
-        << SIZE_OF_INT_IN_BYTES << " bytes ("
-        << SIZE_OF_INT_IN_BITS << " bits)."
-        << "\nMin. possible value of int on this machine: " << std::numeric_limits<int>::min()
-        << "\nMax. possible value of int on this machine: " << std::numeric_limits<int>::max()
-        << "\n\n";
+    std::cout <<
+        "This is what happend when signed int overflows on your machine in your operation system\n"
+        "when code compiled by this particalur compiler with this particular version of Standard Library\n"
+        "with this particular C++ standard when the Moon in this particular phase...\n"
+        "...so, you've got the point, right? It's called \"Undefined Behavior\" (or just UB).\n\n"
+        "To stop it just press Ctrl + C\n\n";
+
+    while (true) {
+        std::cout << x++ << '\n'; // signed int overflow is UB (undefined behavior)
+        std::this_thread::sleep_for(std::chrono::milliseconds(500)); // to add little pause after each loop step
+    }
 }
