@@ -1,26 +1,20 @@
-// Stephen Prata - C++ Primer Plus (6th Edition, 2011)
-// Listing 8.2 (Chapter 8, page 383)
-// firstref.cpp -- defining and using a reference
+// Here you can find more info about built-in types and its range:
+// https://en.cppreference.com/w/cpp/language/types
 
 #include <iostream>
-
+#include <limits>
 
 int main()
 {
-    using namespace std;
-    int rats = 101;
-    int & rodents = rats;   // rodents is a reference
+    const int BITS_IN_BYTE = 8;
+    const int SIZE_OF_INT_IN_BYTES = sizeof(int);
+    const int SIZE_OF_INT_IN_BITS = SIZE_OF_INT_IN_BYTES * BITS_IN_BYTE;
 
-    cout << "rats = " << rats;
-    cout << ", rodents = " << rodents << endl;
-    rodents++;
-    cout << "rats = " << rats;
-    cout << ", rodents = " << rodents << endl;
-
-    // some implementations require type casting the following
-    // addresses to type unsigned
-    cout << "rats address = " << &rats;
-    cout << ", rodents address = " << &rodents << endl;
-    // cin.get();
-    return 0;
+    std::cout
+        << "Size of type int on this machine: "
+        << SIZE_OF_INT_IN_BYTES << " bytes ("
+        << SIZE_OF_INT_IN_BITS << " bits)."
+        << "\nMin. possible value of int on this machine: " << std::numeric_limits<int>::min()
+        << "\nMax. possible value of int on this machine: " << std::numeric_limits<int>::max()
+        << "\n\n";
 }
