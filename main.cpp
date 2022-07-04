@@ -1,4 +1,4 @@
-// Example #10: signed int overflow, UB
+// Example #11: unsigned int overflow, wrapping around
 
 #include <iostream>
 #include <limits>
@@ -7,13 +7,12 @@
 
 int main()
 {
-    int x = std::numeric_limits<int>::max() - 20;
+    unsigned int x; // unsigned int means that you can store in it only positive numbers and 0
+    x = std::numeric_limits<unsigned int>::max() - 10;
 
     std::cout <<
-        "This is what happend when signed int overflows on your machine in your operation system\n"
-        "when code compiled by this particalur compiler with this particular version of Standard Library\n"
-        "with this particular C++ standard when the Moon in this particular phase...\n"
-        "...so, you've got the point, right? It's called \"Undefined Behavior\" (or just UB).\n\n"
+        "This is what happens when unsigned int overflows on your pc. Unsigned int overflow is not UB.\n"
+        "When it overflows, it wraps around, just like miles on your speedometer when it comes to maximal value.\n\n"
         "To stop it just press Ctrl + C\n\n";
 
     while (true) {
