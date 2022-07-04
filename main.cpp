@@ -3,19 +3,21 @@
 
 int main()
 {
-    // Usually variable has a type (here the type is "int"):
-    [[maybe_unused]] int x;
+    std::cout << "Please enter an integer: ";
+    int number;
+    std::cin >> number; // We use std::cin to get user input
 
-    // Usually variable has a name (here the name is "is_positive"):
-    [[maybe_unused]] bool is_positive;
-
-    // Usually variable stores some value (here the value is 3.5):
-    double apples = 3.5;
-
-    // We can obtain address of variable using ampersand symbol:
-    std::cout << "\nAddress of variable apples: " << &apples << "\n\n";
-
-    // & - address-of operator
+    std::cout << "You just entered " << number << '\n';
+    if (number > 0)
+    {
+        std::cout << number << " is a positive number.\n";
+    }
+    else if (number < 0)
+    {
+        std::cout << number << " is a negative number.\n";
+    }
+    else
+    {
+        std::cout << "The number zero is neither positive nor negative.\n";
+    }
 }
-
-//variable is just a named region of memory
