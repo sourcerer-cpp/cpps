@@ -3,21 +3,24 @@
 
 int main()
 {
-    std::cout << "Please enter an integer: ";
-    int number;
-    std::cin >> number; // We use std::cin to get user input
+    int number = 0;
+    char user_choice = 'y';
 
-    std::cout << "You just entered " << number << '\n';
-    if (number > 0)
-    {
-        std::cout << number << " is a positive number.\n";
-    }
-    else if (number < 0)
-    {
-        std::cout << number << " is a negative number.\n";
-    }
-    else
-    {
-        std::cout << "The number zero is neither positive nor negative.\n";
+    while (user_choice == 'y') {
+        std::cout << "Please enter an integer: ";
+        std::cin >> number;
+
+        if (number > 0) {
+            std::cout << number << " is a positive number.\n";
+        }
+        else if (number < 0) {
+            std::cout << number << " is a negative number.\n";
+        }
+        else {
+            std::cout << "The number zero is neither positive nor negative.\n";
+        }
+
+        std::cout << "Would you like to proceed? (y/n) ";
+        std::cin >> user_choice;
     }
 }
