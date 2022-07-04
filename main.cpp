@@ -1,16 +1,26 @@
+// Stephen Prata - C++ Primer Plus (6th Edition, 2011)
+// Listing 8.2 (Chapter 8, page 383)
+// firstref.cpp -- defining and using a reference
+
 #include <iostream>
 
 
 int main()
 {
-    int kids = 4;
-    std::cout << "Value of variable kids: " << kids << '\n';
-    std::cout << "Address of variable kids: " << &kids << "\n\n";
+    using namespace std;
+    int rats = 101;
+    int & rodents = rats;   // rodents is a reference
 
-    // declaration of variable ref_kids of type "reference to int":
-    int & ref_kids // ref_kids is just another name for kids (i.e. alias of kids)
-        = kids;
+    cout << "rats = " << rats;
+    cout << ", rodents = " << rodents << endl;
+    rodents++;
+    cout << "rats = " << rats;
+    cout << ", rodents = " << rodents << endl;
 
-    std::cout << "Value of variable ref_kids: " << ref_kids << '\n';
-    std::cout << "Address of variable ref_kids: " << &ref_kids << "\n\n";
+    // some implementations require type casting the following
+    // addresses to type unsigned
+    cout << "rats address = " << &rats;
+    cout << ", rodents address = " << &rodents << endl;
+    // cin.get();
+    return 0;
 }
